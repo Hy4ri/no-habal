@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>NO HABAL</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <div class="logo"><span class="mark">⛔</span><span class="ltr">NO HABAL</span></div>
+    <span class="status" id="status-pill">—</span>
+  </header>
+
+  <!-- الإخفاء -->
+  <section class="card">
+    <label class="row toggle-row">
+      <span>
+        <strong>إخفاء الحسابات التافهة</strong>
+        <small>إخفاء المنشورات وتخطّي الريلز فوراً.</small>
+      </span>
+      <input type="checkbox" class="switch" id="enabled">
+    </label>
+  </section>
+
+  <!-- الإحصائيات -->
+  <section class="stats">
+    <div class="stat">
+      <div class="num" id="hidden-total">0</div>
+      <div class="lbl">منشور مخفي</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="mine-total">0</div>
+      <div class="lbl">بلاغاتك</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="list-instagram">0</div>
+      <div class="lbl">قائمة Instagram</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="list-facebook">0</div>
+      <div class="lbl">قائمة Facebook</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="list-tiktok">0</div>
+      <div class="lbl">قائمة TikTok</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="list-x">0</div>
+      <div class="lbl">قائمة X</div>
+    </div>
+  </section>
+
+  <!-- الحظر الفعلي -->
+  <section class="card">
+    <label class="row toggle-row">
+      <span>
+        <strong>الحظر الفعلي التلقائي <em class="tag">Instagram فقط</em></strong>
+        <small>يحظر الحسابات المعتمدة من داخل حسابك تدريجياً، فتختفي عنك في الهاتف أيضاً.</small>
+      </span>
+      <input type="checkbox" class="switch" id="autoBlock">
+    </label>
+
+    <div id="block-panel" class="block-panel hidden">
+      <div class="progress-head">
+        <span>اليوم</span>
+        <span class="ltr"><strong id="block-count">0</strong> / <span id="block-cap">35</span></span>
+      </div>
+      <div class="bar"><span id="block-bar"></span></div>
+      <ul class="facts">
+        <li><span>المتبقي في الطابور</span><strong id="block-queue">0</strong></li>
+        <li><span>الحالة</span><strong id="block-state">—</strong></li>
+        <li><span>آخر حظر</span><strong id="block-last" class="ltr">—</strong></li>
+        <li><span>إجمالي من حُظروا</span><strong id="block-total">0</strong></li>
+      </ul>
+      <p class="error hidden" id="block-error"></p>
+    </div>
+
+    <p class="note">
+      يعمل فقط وتبويب Instagram مفتوح ونشط أمامك، بفاصل عشوائي 45–140 ثانية بين كل حظر،
+      وبحد أقصى 35 حظراً يومياً حمايةً لحسابك من القيود.
+    </p>
+  </section>
+
+  <footer class="foot">
+    <span class="muted" id="synced">لم تتم المزامنة بعد</span>
+    <button type="button" class="btn" id="sync-btn">مزامنة الآن</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

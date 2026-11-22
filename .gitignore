@@ -1,0 +1,7 @@
+# لوحة الأدمن لها مستودع مستقل (no-habal-admin)
+admin-dashboard/
+
+# ملفات البناء والإعدادات المحلية
+dist/
+.claude/
+*.zip

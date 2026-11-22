@@ -1,0 +1,172 @@
+.nh-hidden {
+  display: none !important;
+}
+
+.nh-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+
+/* قبل الإبلاغ: علم أخضر من الداخل بخطوط سوداء */
+.nh-icon-flag path {
+  fill: #22c55e;
+}
+.nh-icon-flag {
+  stroke: #000 !important;
+}
+.nh-profile-btn .nh-icon-flag {
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, .6));
+}
+.nh-report-btn {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-inline-start: 6px;
+  border-radius: 50%;
+  color: inherit;
+  cursor: pointer;
+  opacity: 1;
+  vertical-align: middle;
+  transition: opacity .15s, background .15s, color .15s;
+}
+.nh-report-btn:hover,
+.nh-report-btn:focus-visible {
+  opacity: 1;
+  color: #e5484d;
+  background: rgba(229, 72, 77, .14);
+}
+
+/* تيك توك: الزر تحت غلاف الصورة الرمزية (وزر +) في عمود الأزرار */
+.nh-report-btn.nh-tt {
+  display: flex;
+  flex: none;
+  margin: 14px auto 4px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, .92);
+}
+.nh-report-btn.nh-tt .nh-icon {
+  width: 17px;
+  height: 17px;
+}
+.nh-report-btn.nh-tt.nh-done {
+  background: #e5484d;
+}
+
+/* زر الملف الشخصي داخل سطر الاسم (فيسبوك) */
+.nh-profile-btn.nh-inline {
+  margin-inline-start: 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
+
+/* بعد الإبلاغ: دائرة حمراء ممتلئة بعلامة صح بيضاء */
+.nh-report-btn.nh-done {
+  opacity: 1;
+  color: #fff;
+  background: #e5484d;
+  cursor: default;
+}
+.nh-report-btn.nh-done .nh-icon {
+  width: 13px;
+  height: 13px;
+  stroke-width: 3;
+}
+
+.nh-profile-btn {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-inline-start: 12px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: #e5484d;
+  color: #fff;
+  font: 600 13px/1.4 system-ui, 'Segoe UI', Tahoma, sans-serif;
+  cursor: pointer;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.nh-profile-btn:hover { filter: brightness(1.1); }
+.nh-profile-btn:disabled {
+  background: #3a3d45;
+  color: #c9ccd3;
+  cursor: default;
+}
+
+video.nh-covered {
+  visibility: hidden !important;
+}
+.nh-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  flex-direction: column;
+  gap: 12px;
+  background: #111317;
+  color: #e9ebf0;
+  font: 600 15px/1.5 system-ui, 'Segoe UI', Tahoma, sans-serif;
+}
+.nh-toast-action {
+  all: unset;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  font: 600 13px/1.4 system-ui, 'Segoe UI', Tahoma, sans-serif;
+  color: #fff;
+  white-space: nowrap;
+}
+.nh-toast-action:hover {
+  background: rgba(255, 255, 255, .12);
+}
+.nh-toast-action {
+  margin-inline-start: 12px;
+  color: #ffb3b5;
+  border-color: rgba(255, 179, 181, .5);
+}
+
+#nh-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 2147483647;
+  max-width: min(420px, calc(100vw - 32px));
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #16181d;
+  color: #fff;
+  font: 500 14px/1.5 system-ui, 'Segoe UI', Tahoma, sans-serif;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .25);
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  transition: opacity .2s, transform .2s;
+}
+#nh-toast.nh-show {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+#nh-toast.nh-error {
+  background: #c4373c;
+}
