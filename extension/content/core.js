@@ -13,6 +13,8 @@
  */
 (() => {
   'use strict';
+  // Firefox: واجهة browser تعيد Promises؛ Chrome/Edge: chrome
+  const chrome = globalThis.browser ?? globalThis.chrome;
   if (window.NoHabal) return;
 
   const store = chrome.storage.local;

@@ -7,6 +7,10 @@
  */
 'use strict';
 
+// كل الكود داخل دالة حتى نعرّف chrome محلياً (Firefox يستخدم browser)
+(() => {
+const chrome = globalThis.browser ?? globalThis.chrome;
+
 const SUPABASE_URL = 'https://bohiqxxispuwipmfijgn.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_PC6jclCqZQiyyNJ_qv4uaA_VirW49YD';
 
@@ -384,3 +388,4 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
       return false;
   }
 });
+})();

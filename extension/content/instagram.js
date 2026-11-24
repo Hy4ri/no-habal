@@ -4,6 +4,8 @@
  */
 (() => {
   'use strict';
+  // Firefox: واجهة browser تعيد Promises؛ Chrome/Edge: chrome
+  const chrome = globalThis.browser ?? globalThis.chrome;
 
   // مسارات ليست حسابات
   const RESERVED = new Set([

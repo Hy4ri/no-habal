@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "NO HABAL",
   "short_name": "NO HABAL",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "إخفاء الحسابات التافهة على إنستغرام وفيسبوك وتيك توك وX بناءً على قائمة جماعية.",
   "default_locale": "ar",
   "icons": {

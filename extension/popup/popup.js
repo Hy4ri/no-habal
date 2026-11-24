@@ -1,6 +1,8 @@
 /* NO HABAL — Popup: إحصائيات + مفاتيح التشغيل */
 (() => {
   'use strict';
+  // Firefox: واجهة browser تعيد Promises؛ Chrome/Edge: chrome
+  const chrome = globalThis.browser ?? globalThis.chrome;
 
   const $ = (id) => document.getElementById(id);
   const send = (msg) => chrome.runtime.sendMessage(msg);
